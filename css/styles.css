@@ -105,6 +105,8 @@ ul, li {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -148,6 +150,8 @@ ul, li {
   text-decoration: none;
   font-weight: 500;
   align-items: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav .link:hover,
@@ -363,9 +367,13 @@ ul, li {
   align-items: center;
   padding: 12px;
   border-radius: 50%;
+
+  transition: background-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.social-link:hover{
+.social-link:hover,
+.social-link:focus{
   background-color: var(--accent-color);
   color: var(--white-color);
 }
@@ -387,7 +395,8 @@ ul, li {
   color: var(--icons);
 }
 
-.client-cont:hover{
+.client-cont:hover,
+.client-cont:focus{
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -404,6 +413,8 @@ ul, li {
   border: 1px solid var(--icons);
   color: var(--icons);
   border-radius: 4px;
+
+  transition: color, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client {
   width: 106px;
@@ -444,6 +455,8 @@ ul, li {
 .address-list .link{
   display: inline-block;
   margin-top: 9px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list .link:hover,
@@ -507,10 +520,13 @@ ul, li {
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid transparent;
+
+  transition: background-color, color, filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 .flex-btn {
   margin-right: 8px;
+
 }
 
 .flex-btn:nth-child(5n){
@@ -556,7 +572,6 @@ ul, li {
 
 .thumb {
   position: relative;
-  /* transform: translateY(0); */
   overflow: hidden;
 }
 .thumb::before {
@@ -566,32 +581,29 @@ ul, li {
   width: 100%;
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
+
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.flex-element:hover .thumb::before {
+ .thumb:hover::before {
   transform: translateY(0);
 }
-/* .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-  transform: translateY(100%);
-  transition: transform 250ms ease;
-} */
 
+.flex-element .link:focus .thumb::before {
+  transform: translateY(0);
+}
 
 .flex-element .link {
   display: block;
 
   color: var(--title-text-color);
   text-decoration: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.flex-element .link:hover {
+.flex-element .link:hover,
+.flex-element .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
